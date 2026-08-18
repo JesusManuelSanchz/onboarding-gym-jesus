@@ -47,11 +47,3 @@ if (form) {
         form.reset();
     });
 }
-
-boton.addEventListener('click', () => {
-
-    document.body.style.backgroundColor = '#333';
-    
-   
-    console.log("¡JavaScript funcionando correctamente!");
-});

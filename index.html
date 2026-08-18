@@ -29,30 +29,19 @@
             <li>Zona de cardio y estiramientos</li>
             
         </ul>
+        <li>Zona de cardio y estiramientos</li>
+        </ul>
 
-        <button id="btn-cambio">¡Haz clic aquí!</button>
+        <div class="seccion-clases">
+            <h2>Nuestras Clases</h2>
+           
+            <p id="error-servidor" style="color: red; display: none;">
+                 Error: No se pudo conectar con el servidor. Las clases no están disponibles en este momento.
+            </p>
+            <!-- Aquí JavaScript inyectará las clases -->
+            <div id="lista-clases"></div>
+        </div>
 
-        <section id="inscripcion" style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #444;">
-            <h3>Registro de Inscripción</h3>
-            <form id="gym-form">
-                <div style="margin-bottom: 15px;">
-                    <label for="nombre">Nombre completo:</label><br>
-                    <input type="text" id="nombre" name="nombre" style="padding: 8px; width: 100%; max-width: 400px; margin-top: 5px;">
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <label for="email">Correo electrónico:</label><br>
-                    <input type="text" id="email" name="email" style="padding: 8px; width: 100%; max-width: 400px; margin-top: 5px;">
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <label for="edad">Edad:</label><br>
-                    <input type="number" id="edad" name="edad" style="padding: 8px; width: 100%; max-width: 400px; margin-top: 5px;">
-                </div>
-                <button type="submit" style="padding: 10px 20px; background-color: #4caf50; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 5px;">Enviar inscripción</button>
-            </form>
-            
-            <p id="error-msg" style="color: #ff5252; margin-top: 15px; font-weight: bold;"></p>
-            <p id="success-msg" style="color: #4caf50; margin-top: 15px; font-weight: bold;"></p>
-        </section>
     </main>
 
     <footer>

@@ -19,3 +19,6 @@ Este proyecto está empaquetado con Docker para facilitar su ejecución sin nece
    ```bash
    docker compose up
    ```
+   ## Demo en Vivo (Módulo 13)
+Link del servidor: https://onboarding-gym-jesus-production.up.railway.app/api/clases
+*Nota: Este enlace es una demostración temporal alojada con el crédito gratuito del trial de Railway. Cuando el saldo de prueba se agote, la aplicación se apagará automáticamente.*

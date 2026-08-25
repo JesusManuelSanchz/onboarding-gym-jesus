@@ -5,7 +5,7 @@ const app = express();
 const PORT: number = 3000;
 
 app.use(cors());
-
+app.use(express.static('public'));
 app.get('/api/clases', (req: Request, res: Response) => {
     const clases = [
         { id: 1, nombre: 'Crossfit', horario: '08:00 AM', instructor: 'Carlos' },

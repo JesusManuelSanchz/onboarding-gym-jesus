@@ -46,7 +46,7 @@ const contenedorClases = document.getElementById('lista-clases');
 const mensajeError = document.getElementById('error-servidor');
 
 function obtenerClases() {
-    fetch('https://onboarding-gym-jesus-production.up.railway.app/api/clases')
+    fetch('/api/clases')
         .then(respuesta => {
             if (!respuesta.ok) {
                 throw new Error('El servidor no respondió correctamente');

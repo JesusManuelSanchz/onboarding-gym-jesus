@@ -1,20 +1,27 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import { Pool } from 'pg'; 
 
 const app = express();
-const PORT: number = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(express.static('public'));
 
-app.get('/api/clases', (req: Request, res: Response) => {
-    const clases = [
-        { id: 1, nombre: 'Crossfit', horario: '08:00 AM', instructor: 'Carlos' },
-        { id: 2, nombre: 'Yoga', horario: '10:00 AM', instructor: 'María' },
-        { id: 3, nombre: 'Boxeo', horario: '06:00 PM', instructor: 'Luis' }
-    ];
-    res.json(clases);
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+app.get('/api/clases', async (req: Request, res: Response) => {
+    try {
+        const respuesta = await pool.query('SELECT * FROM clases');
+        res.json(respuesta.rows);
+    } catch (error) {
+        console.error('Error en la base de datos:', error);
+        res.status(500).json({ error: 'Error al conectar con la base de datos' });
+    }
+});
+
+app.listen(Number(PORT), '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

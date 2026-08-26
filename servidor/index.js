@@ -32,6 +32,6 @@ app.get('/api/clases', (req, res) => __awaiter(void 0, void 0, void 0, function*
         res.status(500).json({ error: 'Error al conectar con la base de datos' });
     }
 }));
-app.listen(PORT, () => {
+app.listen(Number(PORT), '0.0.0.0', () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

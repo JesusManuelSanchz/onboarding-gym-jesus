@@ -22,6 +22,6 @@ app.get('/api/clases', async (req: Request, res: Response) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(Number(PORT), '0.0.0.0', () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

@@ -64,8 +64,9 @@ function obtenerClases() {
                 tarjeta.className = 'clase-card';
                 tarjeta.innerHTML = `
                     <h3>${clase.nombre}</h3>
-                    <p><strong>Instructor:</strong> ${clase.instructor}</p>
+                    <p><strong>Descripción:</strong> ${clase.descripcion}</p>
                     <p><strong>Horario:</strong> ${clase.horario}</p>
+                    <p><strong>Cupo:</strong> ${clase.cupo} personas</p>
                     <hr>
                 `;
                 if (contenedorClases) contenedorClases.appendChild(tarjeta);
